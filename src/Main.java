@@ -1,20 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        String paragraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
-
+        String sentence = "To be or not to be";
         HashTable hashTable = new HashTable(10);
-
-        String[] words = paragraph.split(" ");
+        String[] words = sentence.split(" ");
         for (String word : words) {
+            word = word.toLowerCase();
             hashTable.put(word, 1);
         }
-
-        System.out.println("Before removal of 'avoidable':");
-        hashTable.printHashTable();
-
-        hashTable.remove("avoidable");
-
-        System.out.println("\nAfter removal of 'avoidable':");
+        System.out.println("frequency of words in a sentence 'To be or not to be' : ");
         hashTable.printHashTable();
     }
 }
